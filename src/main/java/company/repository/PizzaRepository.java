@@ -9,11 +9,10 @@ import java.util.List;
 @Component
 public class PizzaRepository {
 
-    private static List<Pizza> pizzaList = new ArrayList<>();
+    private static final List<Pizza> pizzaList = new ArrayList<>();
 
-    public Pizza createPizza(Pizza pizzaToSave) {
+    public void createPizza(Pizza pizzaToSave) {
         pizzaList.add(pizzaToSave);
-        return pizzaToSave;
     }
 
     public List<Pizza> readAll() {
